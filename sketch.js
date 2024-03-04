@@ -52,10 +52,10 @@ function preload() {
     //Player sprite
     // playerSprite = loadImage("orangecat.png");
     playerSprites = {
-        up: loadImage("orangecat.png"),
-        down: loadImage("orangecat.png"),
-        left: loadImage("orangeleft.png"),
-        right: loadImage("orangeright.png")
+        up: loadImage("assets/orangecat.png"),
+        down: loadImage("assets/orangecat.png"),
+        left: loadImage("assets/orangeleft.png"),
+        right: loadImage("assets/orangeright.png")
     }
 }
 
