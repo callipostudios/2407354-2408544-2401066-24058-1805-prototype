@@ -5,6 +5,12 @@ let numAcross = 20;
 let tileSize = 50;
 let textures = [];
 
+//VARIABLES FOR PLAYER
+let player;
+let playerSprites = {};
+let playerSpeed = 5;
+let playerSize = tileSize;
+
 let graphicMap = [ 
 //         THIS IS OUR Y AXIS
 //   0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 14 16 17 18 19
@@ -37,11 +43,6 @@ let tileRules = [
 
 ]
 
-//INITIALISE VARIABLES FOR PLAYER
-/*let player;
-let playerSprite;
-let playerSpeed = 5;
-let playerSize = tileSize; */
 
 function preload() {
     //tilemap textures
@@ -50,7 +51,13 @@ function preload() {
     textures[2] = loadImage("icecream.png");
 
     //Player sprite
-   // playerSprite = loadImage("callipo.png");
+    // playerSprite = loadImage("orangecat.png");
+    playerSprites = {
+        up: loadImage("orangecat.png"),
+        down: loadImage("orangecat.png"),
+        left: loadImage("orangeleft.png"),
+        right: loadImage("orangeright.png")
+    }
 }
 
 function setup() {
@@ -74,7 +81,7 @@ function setup() {
     //Tile creation finished
 
     //Create Player
-   // player = new Player(playerSprite, 3, 4, tileSize, playerSpeed, tileSize, tileRules);
+    player = new Player(playerSprite, 3, 4, tileSize, playerSpeed, tileSize, tileRules);
 }
 
 function draw() {
@@ -89,18 +96,21 @@ function draw() {
     }
     // Finishes looping through all tiles within each draw() loop
 
-   // player.display();
-   // player.move();
+    player.display();
+    player.move();
 }
 
-/* function keyPressed() {
+ function keyPressed() {
     player.setDirection();
 }
 
 class Player {
-    constructor(sprite, startAcross, startDown, size, speed, tileSize, tileRules) {
+    constructor(sprites, startAcross, startDown, size, speed, tileSize, tileRules) {
         //Attach sprite to key in object
-        this.sprite = sprite;
+        this.sprites = sprites;
+
+        //Set current sprite
+        this.currentSprite = this.sprites.down;
 
         //Store starting tile info. Later, we will use these to store the current tile the player is on.
         this.across = startAcross;
@@ -140,24 +150,28 @@ class Player {
             if (key === "w") {
                 this.dirX = 0;
                 this.dirY = -1; //direction is up!
+                this.currentSprite = this.sprites.up;
             }
 
             //DOWN
             if (key === "s") {
                 this.dirX = 0;
                 this.dirY = 1; //direction is down!
+                this.currentSprite = this.sprites.down;
             }
 
             //LEFT
             if (key === "a") {
                 this.dirX = -1; //direction is left!
                 this.dirY = 0; 
+                this.currentSprite = this.sprites.left;
             }
 
             //RIGHT
             if (key === "d") {
                 this.dirX = 1; //direction is right!
                 this.dirY = 0;
+                this.currentSprite = this.sprites.right;
             }
 
             //With the direction set, we can now move to the next code block to check if we can move!
@@ -218,11 +232,11 @@ class Player {
 
     display() {
         imageMode(CORNER);
-        image(this.sprite, this.xPos, this.yPos, this.size, this.size);
+        image(this.currentSprite, this.xPos, this.yPos, this.size, this.size);
     }
 }
 
-*/
+
 
 class Tile {
     constructor(texture, across, down, tileSize, tileID) {
