@@ -5,6 +5,11 @@ let numAcross = 10;
 let tileSize = 50;
 let textures = [];
 
+let score = 0;
+let stage = 0; // controls what function should be running
+//stage 0 = start 
+//stage 
+
 //VARIABLES FOR PLAYER
 let player;
 let playerSprites = [];
@@ -60,7 +65,7 @@ function preload() {
         up: loadImage("assets/orangecat.png"),
         down: loadImage("assets/orangecat.png"),
         left: loadImage("assets/orangeleft.png"),
-        right: loadImage("assets/orangeright.png")
+        right: loadImage("orangeright.png")
     }
 }
 
