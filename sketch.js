@@ -1,15 +1,19 @@
 //INITIALISE VARIABLES FOR TILEMAP
 let tilemap = [];
 let numDown = 10;
-let numAcross = 20;
+let numAcross = 10;
 let tileSize = 50;
 let textures = [];
 
 //VARIABLES FOR PLAYER
 let player;
-let playerSprites = {};
+let playerSprites = [];
 let playerSpeed = 5;
 let playerSize = tileSize;
+
+//VARIABLES FOR BULLETS
+let dots = [];
+let bullets = [];
 
 let graphicMap = [ 
 //         THIS IS OUR Y AXIS
@@ -80,8 +84,11 @@ function setup() {
     //Tile creation finished
 
     //Create Player
-    player = new Player(playerSprite, 3, 4, tileSize, playerSpeed, tileSize, tileRules);
+    player = new Player(playerSprites, 3, 4, tileSize, playerSpeed, tileSize, tileRules);
+
+    
 }
+
 
 function draw() {
     background(0);
