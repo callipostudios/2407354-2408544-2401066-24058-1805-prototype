@@ -5,10 +5,12 @@ let numAcross = 10;
 let tileSize = 50;
 let textures = [];
 
-//let score = 0;
-//let stage = 0; // controls what function should be running
+let score = 0;
+let stage = 0; // controls what function should be running
 //stage 0 = start 
-//stage 
+//stage 1 = game
+//stage 2 = win
+
 
 //VARIABLES FOR PLAYER
 let player;
@@ -59,6 +61,8 @@ function preload() {
     textures[1] = loadImage("assets/tunnels.png");
     textures[2] = loadImage("assets/icecream.png");
 
+   
+
     //Player sprite
     // playerSprite = loadImage("orangecat.png");
     playerSprites = {
@@ -95,8 +99,34 @@ function setup() {
     
 }
 
+function draw(){
+    if (stage == 0) {
+        start();
+    }
 
-function draw() {
+    if (stage == 1) {
+        game();
+    }
+
+    if (stage == 2) {
+        win();
+    }
+
+    if(mouseIsPressed == true){
+        stage = 1;
+    }
+}
+
+
+function start(){
+    text('CLICK TO START', 250, 250);
+}
+
+function win(){
+
+}
+
+function game() {
     background(0);
     
     // Loops through all tiles each time draw() is called
