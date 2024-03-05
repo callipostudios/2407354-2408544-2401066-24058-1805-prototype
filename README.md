@@ -1,18 +1,25 @@
-# Calipo the Castronaut 
+# Callipo the Castronaut 
 
 
-### Narrative 
+ By Callipo Studios
+ Members: Alisha Din 2407354 
+          Ana Ana Kushchyk 2408544
+          Cameron Sayers
+          Mia Barclay 2405897
 
- The narrative of our game is about Calipo (a ginger space cat) who is travelling from the magically cold Ice-Cream planet to the Cat planet, but he gets aggressively attacked by a hoard of space-pirate dogs. Calipo also owns an Ice Cream van but during the attack, the dogs wrecked and stole it, but while they spaced (drove) off, all the deliciously sweet ice cream dramatically tumbled out of the rear end of the van. Now, our protagonist Calipo must venture onto a rescue mission to restore and collect the sweet cargo that the oh so evil dogs lost. At the end, Calipo must safely return to the Cat planet with his fully stocked Van of ice cream. 
+
+## Narrative 
+
+ The narrative of our game is about Callipo (a ginger space cat) who is travelling from the magically cold Ice-Cream planet to the Cat planet, but he gets aggressively attacked by a hoard of space-pirate dogs. Callipo also owns an Ice Cream van but during the attack, the dogs wrecked and stole it, but while they spaced (drove) off, all the deliciously sweet ice cream dramatically tumbled out of the rear end of the van. Now, our protagonist Callipo must venture onto a rescue mission to restore and collect the sweet cargo that the oh so evil dogs lost. At the end, Callipo must safely return to the Cat planet with his fully stocked Van of ice cream. 
 
 
 ## Game Mechanics 
 
-The Player (calipo) must avoid attacks from the pirate dogs while collecting the fallen ice-creams. Each collected ice cream means that the player gains a point.  
+The Player (callipo) must avoid attacks from the pirate dogs while collecting the fallen ice-creams. Each collected ice cream means that the player gains a point.  
 
-At the beginning of each new level, the dogs upgrade (to different breeds) and become stronger, while the difficulty for Calipo increases.  
+At the beginning of each new level, the dogs upgrade (to different breeds) and become stronger, while the difficulty for Callipo increases.  
 
-The final boss that Calipo must face, is yappy little Chichi the space chihuahua. He must face Chichi inside the Ice cream vans and finally defeat the evil chihuahua.  
+The final boss that Callipo must face, is yappy little Chichi the space chihuahua. He must face Chichi inside the Ice cream vans and finally defeat the evil chihuahua.  
 
  
 
