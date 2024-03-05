@@ -14,6 +14,7 @@ let playerSize = tileSize;
 //VARIABLES FOR BULLETS
 let dots = [];
 let bullets = [];
+//Work in Progress
 
 let graphicMap = [ 
 //         THIS IS OUR Y AXIS
