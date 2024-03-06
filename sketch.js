@@ -345,6 +345,38 @@ class Tile {
     } // I've hidden the DEBUG method but this is where the code for it goes!
 }
 
+
+class Dot{
+    constructor(x, y){
+        this.x = x;
+        this.y = y;
+        this.xspeed = random(-1, 1);
+        this.yspeed = random(-1, 1);
+        this.r = random(10, 30);
+    }
+
+    display(){
+        noStroke();
+        ellipseMode(CENTER);
+        fill(120, 20, 200);
+        ellipse(this.x, this.y, this.r * 2);
+    }
+
+    move(){
+        this.x += this.xspeed;
+        this.y += this.yspeed;
+        if(this.x >= width + this){
+            this.x = 0 - this.r;
+        } else if (this.x <= 0 - this.r) {
+          this.x = width + this.r;
+        } else if (this.y >= height + this.r) {
+          this.y = 0 - this.r;
+        } else if (this.y <= 0 - this.r) {
+          this.y = height + this.r;  
+        }
+    }
+}
+
 class Bullet{
     constructor(x, y){ //IMPORTANT FOR MOUSE PRESSED
         this.x = x;
