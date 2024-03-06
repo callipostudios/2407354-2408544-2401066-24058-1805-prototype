@@ -311,3 +311,22 @@ class Tile {
         text(this.tileID, this.xPos, this.yPos);
     } // I've hidden the DEBUG method but this is where the code for it goes!
 }
+
+//VARIABLES FOR ENEMIES
+let enemy;
+let enemySprites = [];
+let enemySpeed = 5;
+let enemySize = tileSize;
+
+function preload() {
+
+    //Enemy sprite
+    // enemySprite = ("dog1.jpeg") for now, 
+    enemySprites = {
+        up: loadImage ("dog1.jpeg")
+        down: loadImage ("dog1.jpeg") 
+        left: loadImage ("dog1.jpeg") 
+        right: loadImage ("dog1.jpeg")
+    }
+}
+// curently trying to make the enemy move from left to right, ending the game if they collide with the player
