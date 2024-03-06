@@ -96,7 +96,11 @@ function setup() {
     //Create Player
     player = new Player(playerSprites, 3, 4, tileSize, playerSpeed, tileSize, tileRules);
 
-    
+    //Adds new dots to the dots array
+    for(let i = 0; i < dots.length;){
+        let d = new Dot(width/2, height/2);
+        dots.push(d);
+    }
 }
 
 // this creates a stage which flicks through the screens when needed, the game will always start with the start screen, then when clciked move into the game.
@@ -144,6 +148,31 @@ function game() {
 
     player.display();
     player.move();
+    
+    //Bullets
+    for(let i = 0; i < dots.length; i++){
+        dots[i].display();
+        dots[i].move();
+    }
+
+    for (let j = bullets.length - 1; j >= 0; j--) {
+        bullets[j].display();
+        bullets[j].move();
+    
+        if(bullets[j].y < 0){
+          bullets.splice(j,1);
+          break;
+        }
+    
+    for (let i = dots.length - 1; i >= 0; i--) {
+          if(bullets[j].testIntersection(dots[i])){
+            console.log("hit");
+            dots.splice(i,1);
+            bullets.splice(j,1);
+            break;
+          }
+        }
+    }
 }
 
  function keyPressed() {
@@ -315,6 +344,49 @@ class Tile {
         text(this.tileID, this.xPos, this.yPos);
     } // I've hidden the DEBUG method but this is where the code for it goes!
 }
+
+class Bullet{
+    constructor(x, y){ //IMPORTANT FOR MOUSE PRESSED
+        this.x = x;
+        this.y = y;
+        this.yspeed = -3;
+        this.r = 3;
+    }
+
+    display(){
+        noStroke();
+        ellipse(CENTER);
+        fill(255, this.a);
+        ellipse(this.x, this.y, this.r * 2);
+    }
+
+    move(){
+        this.y += this.yspeed;
+    }
+
+    testIntersection(dot){
+        let d = dist(this.x, this.u, dot.x, dot.y);
+        if(d <= this.r + dot.r){
+            return true;
+        }
+    }
+}
+
+
+function mousePressed(){
+    let b = new Bullet(mouseX, mouseY);
+    bullets.push(b);
+}
+
+
+
+
+
+
+
+
+
+
 
 /*
 //VARIABLES FOR ENEMIES
