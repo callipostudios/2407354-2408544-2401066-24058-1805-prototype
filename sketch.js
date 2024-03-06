@@ -378,7 +378,7 @@ class Dot{
 }
 
 class Bullet{
-    constructor(x, y){ //IMPORTANT FOR MOUSE PRESSED
+    constructor(x, y){
         this.x = x;
         this.y = y;
         this.yspeed = -3;
@@ -404,7 +404,7 @@ class Bullet{
     }
 }
 
-
+//Cretates a bullet when pressed
 function mousePressed(){
     let b = new Bullet(mouseX, mouseY);
     bullets.push(b);
