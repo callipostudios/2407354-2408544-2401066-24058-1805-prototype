@@ -44,16 +44,16 @@ Some aspects we will work to add in the future include multiple levels, sound ef
 We are going for a very cute hyper style theme, which is reflected in the pastel colours we are using. We are also creating all of our assets in a retro pixel art style. 
 
 ### Moodboard
-![](assets/moodboard.webp) 
+![](images/moodboard.webp) 
 
 ### Assets
-![](assets/chichi.webp) 
+![](images/chichi.webp) 
 Chichi the space dog pirates leader
 
-![](assets/calliposit.webp) 
+![](images/calliposit.webp) 
 Callipo sitting
 
-![](assets/calliporight.webp) 
+![](images/calliporight.webp) 
 Callipo walking right
 
 ## Roles for the team 
