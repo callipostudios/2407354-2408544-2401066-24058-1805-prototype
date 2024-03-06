@@ -29,7 +29,15 @@ At the beginning of each new level, the dogs upgrade (to different breeds) and b
 The final boss that Callipo must face, is yappy little Chichi the space chihuahua. He must face Chichi inside the Ice cream vans and finally defeat the evil chihuahua.  
 
 ## References 
+
+We used the code from lesson as a base in regards to tile mapping and movement.
+
 https://editor.p5js.org/ethanfrier/sketches/Sz8fGi37K
+
+https://www.youtube.com/watch?v=JHBuRkJObIg&list=PLBDInqUM5B25FzygoJ9Ifg1TZXmIHz4zh&index=7
+Referenced this video to create game stages and to help create a simple start screen. Further I will take the code and adjust it to make various different levels and an end screen.
+
+All of our assets currently are images found online. They are simply placeholder images while we create our own assets.
 
 ## Themes 
 
