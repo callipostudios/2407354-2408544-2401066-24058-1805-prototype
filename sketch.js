@@ -314,13 +314,14 @@ class Tile {
     } // I've hidden the DEBUG method but this is where the code for it goes!
 }
 
+/*
 //VARIABLES FOR ENEMIES
 let enemy;
 let enemySprites = [];
 let enemySpeed = 5;
 let enemySize = tileSize;
 
-/*
+
 function preload() {
 
     //Enemy sprite
