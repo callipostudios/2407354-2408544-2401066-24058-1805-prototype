@@ -33,6 +33,7 @@ The final boss that Callipo must face, is yappy little Chichi the space chihuahu
 We used the code from lesson as a base in regards to tile mapping and movement.
 
 https://editor.p5js.org/ethanfrier/sketches/Sz8fGi37K
+This is what we referenced in order to create a shooting mechanic. We are looking to work and improve this as we have not yet got it to work.
 
 https://www.youtube.com/watch?v=JHBuRkJObIg&list=PLBDInqUM5B25FzygoJ9Ifg1TZXmIHz4zh&index=7
 Referenced this video to create game stages and to help create a simple start screen. Further I will take the code and adjust it to make various different levels and an end screen.
