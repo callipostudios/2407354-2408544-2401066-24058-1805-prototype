@@ -121,7 +121,9 @@ function draw(){
 
 
 function start(){
-    text('CLICK TO START', 250, 250);
+    background(195, 177, 225);
+    
+    text('CLICK TO START', 200, 250);
 }
 
 function win(){
