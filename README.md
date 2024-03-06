@@ -28,7 +28,8 @@ At the beginning of each new level, the dogs upgrade (to different breeds) and b
 
 The final boss that Callipo must face, is yappy little Chichi the space chihuahua. He must face Chichi inside the Ice cream vans and finally defeat the evil chihuahua.  
 
- 
+## References 
+https://editor.p5js.org/ethanfrier/sketches/Sz8fGi37K
 
 ## Themes 
 
