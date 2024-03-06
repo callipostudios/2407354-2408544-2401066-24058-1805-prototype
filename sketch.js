@@ -382,12 +382,6 @@ function mousePressed(){
 
 
 
-
-
-
-
-
-
 /*
 //VARIABLES FOR ENEMIES
 let enemy;
