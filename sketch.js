@@ -99,6 +99,8 @@ function setup() {
     
 }
 
+// this creates a stage which flicks through the screens when needed, the game will always start with the start screen, then when clciked move into the game.
+
 function draw(){
     if (stage == 0) {
         start();
@@ -318,15 +320,17 @@ let enemySprites = [];
 let enemySpeed = 5;
 let enemySize = tileSize;
 
+/*
 function preload() {
 
     //Enemy sprite
     // enemySprite = ("dog1.jpeg") for now, 
     enemySprites = {
-        up: loadImage ("dog1.jpeg")
-        down: loadImage ("dog1.jpeg") 
-        left: loadImage ("dog1.jpeg") 
-        right: loadImage ("dog1.jpeg")
+        up: loadImage ("assets/dog1.jpeg")
+        down: loadImage ("assets/dog1.jpeg") 
+        left: loadImage ("assets/dog1.jpeg") 
+        right: loadImage ("assets/dog1.jpeg")
     }
 }
 // curently trying to make the enemy move from left to right, ending the game if they collide with the player
+*/
