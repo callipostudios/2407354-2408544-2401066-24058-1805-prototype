@@ -2,10 +2,17 @@
 
 
  By Callipo Studios
- Members: Alisha Din 2407354 
-          Ana Ana Kushchyk 2408544
-          Cameron Sayers
+ 
+ Members: 
+
+          
+          Alisha Din 2407354 
+          Ana Kushchyk 2408544
+          Cameron Sayers 2401066
           Mia Barclay 2405897
+
+## Overview
+This is a tile map, level based game in which the player needs to navigate their way through the levels, each getting progressively harder until the player suceeds in beating the levels. There will be enemies in which the player can shoot at and kill that also shoot at you. There are ice creams which serve as a point system which you will need to collect a certain amount to pass the level. 
 
 
 ## Narrative 
@@ -30,8 +37,24 @@ The colours and themes for this game will be space-centred, with cute pastel col
 
 
 ## Future Implementations
-Some aspects we will work to add in thee future include multiple levels, sound effects/background music, fighting mechanics, moving enemies etc. 
+Some aspects we will work to add in the future include multiple levels, sound effects/background music, fighting mechanics, moving enemies etc. 
  
+## Aesthetics
+
+We are going for a very cute hyper style theme, which is reflected in the pastel colours we are using. We are also creating all of our assets in a retro pixel art style. 
+
+### Moodboard
+![](assets/moodboard.webp) 
+
+### Assets
+![](assets/chichi.webp) 
+Chichi the space dog pirates leader
+
+![](assets/calliposit.webp) 
+Callipo sitting
+
+![](assets/calliporight.webp) 
+Callipo walking right
 
 ## Roles for the team 
 
