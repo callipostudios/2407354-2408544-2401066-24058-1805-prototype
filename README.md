@@ -90,9 +90,30 @@ I used the player and player movement code from lesson and from the notion slide
 
 Point system, picking up objects & read.me file/written work = Mia 
 
+<<<<<<< HEAD
 I started off with writing the read.me file with a descriptive narrative of the game plan. I then developed the game mechanics section and described how they worked. I also described the themes and inspiration for the game, as well as the moodboard which shows our inspiration of pastel colours and 8bit art for the game. I started to work on my parts of the code; successfully got the point system in, however, size adjustment of the text is needed (make it bigger and bolder with strokeweight). Also, I need to fix the issue of 'POINTS' disappearing after the character moves. I now have the code ready for the IceCream point systems, but as of now, it is still commented and needs correct placement on the code.
 
  I have yet to implement the life system for the player, the player will likely have 3 lives and one hit from the enemy would reseult in the loss of 1 heart/life.
+=======
+(reminder 1 ice cream = 1 point) Point text has been placed in top left corner. 
+
+ psudo = if player hits icecreamSprite points + 1
+
+(if player collides with icecreamSprite then add 1 to point system)
+elseif (this means if player doesn't) leave the point system as is. 
+
+Aim for the next updates:
+
+- Make the icecreams show up and disappear when hit. 
+- Figure out how to keep the point text fixed (talk to anya, could be to do w her bullet thing)
+07/03 - GOAL
+
+- When you hit the ice cream, number goes up
+- Make the ice cream disappear
+09/03 - GOAL
+
+
+>>>>>>> 894298ae5d0da1bac59a1b0adc589455a3ee0aa5
 
 
 Killing enemies, Character art, enemy movement & enemy attacking = Cam 
