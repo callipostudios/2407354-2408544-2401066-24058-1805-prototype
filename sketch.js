@@ -13,7 +13,7 @@ let stage = 0; // controls what function should be running
 
 //VARIABLES FOR ICECREAM POINT SYSTEM
 
-let icecreamSprite;
+let coinSprite; //ice cream
 let pointSystem = 0;
 
 
@@ -69,18 +69,9 @@ function preload() {
 
 
 
-    //MIA
-    // ICECREAMS HERE, MAKE THEM APPEAR - reminder for me
-    icecreamSprite = loadImage("assets/icecream.png");
-
-
-
-<<<<<<< HEAD
    //coin system (the coins are icecreams, but to make things easier for myself, they're named coins on the code - mia)
 
    coin = loadImage ("assets/icecream.png"); // STEP 1, IF FAILS COME BACK HERE
-=======
->>>>>>> fc940bb1c8459187e539d67eb1489e8f8000341a
 
     //Player sprite
     // playerSprite = loadImage("orangecat.png");
@@ -196,9 +187,11 @@ function game() {
         }
     }
 
-
+ // coins
+ //image(coin, c1X, c1Y, cWidth, cHeight); - paused the game NEEDS FIXING
     
     text('POINTS: ' , 5, 5);
+    text('LIVES: 3', 205, 5); // come back to this wednesday
 
 
      // attempting to insert points here using if/else.  
@@ -495,50 +488,50 @@ function preload() {
 
 /*MIA CODE
 
-// COMMENTED NEW CODE 07/03/24 - needs to be correctly placed
- // icecreamSprite(icecreamXPos, icecreamXPos, icecreamSize);
+// COMMENTED NEW CODE 07/03/24 - needs to be correctly placed draw section
+ // coin(coinXPos, coinXPos, coinSize);
 
  //if (lives <= 0) {
     //speed = 0;
-    //icecreamXPos = -100;}
-    //if (icecreamXPos >= mouseX - playerSize/2 && icecreamYPos <= mouseX + playerSize/2 && icecreamYPos > playerSize) {
-    //icecreamYPos = -playerSize / 2;
+    //coinXPos = -100;}
+    //if (coinXPos >= mouseX - playerSize/2 && coinYPos <= mouseX + playerSize/2 && coinYPos > playerSize) {
+    //coinYPos = -playerSize / 2;
     //circleXPos = random(25, 426);
     //score += 1;} 
     //if (icecreamYPos >= 525) {
-    //icecreamYPos = -playerSize / 2;
-    //icecreamXPos = random(25, 426);
+    //coinYPos = -playerSize / 2;
+    //coinXPos = random(25, 426);
     //if (lives === 0) {
     //lives = 0;} else {lives -= 1;}}}
 
    // }
 
-//VARIABLES FOR ICECREAM POINT SYSTEM
+//VARIABLES FOR ICECREAM POINT SYSTEM at the top!
 
-let icecreamSprite;
-let icecreamXPos;
-let icecreamYPos;
-let icecreamSize = 25;
+let coinSprite;
+let coinXPos;
+let coinYPos;
+let coinSize = 25;
 //let pointSystem = 0;
 let playerPoints = 0;
 
 //if (playerCollision) {
 
 
-// icecreamSprite location setting
-icecreamYPos = -playerSize / 2;
-icecreamXPos = random(25, 426);
+// coinSprite location setting
+coinYPos = -playerSize / 2;
+coinXPos = random(25, 426);
 
 //let lives = 5;
 
 
     // attempting to insert points here using if/else.  
 
-    // player.overlap(icecreamSprite)
+    // player.overlap(coinSprite)
 
     //different attempt at inserting points - mia
     
-    // When the player collects an icecream (assuming icecream tile index is 5)
+    // When the player collects an icecream (assuming coin tile index is 5)
 
 //}
 
