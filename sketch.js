@@ -11,6 +11,11 @@ let stage = 0; // controls what function should be running
 //stage 1 = game
 //stage 2 = win
 
+//VARIABLES FOR ICECREAM POINT SYSTEM
+
+let icecreamSprite;
+let pointSystem = 0;
+
 
 //VARIABLES FOR PLAYER
 let player;
@@ -27,12 +32,12 @@ let graphicMap = [
 //         THIS IS OUR Y AXIS
 //   0  1  2  3  4  5  6  7  8  9 
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 0
-    [0, 0, 0, 0, 0, 0, 0, 0, 2, 0], // 1
+    [0, 0, 0, 0, 0, 0, 0, 0, 1, 0], // 1
     [0, 0, 0, 1, 0, 0, 0, 0, 0, 0], // 2
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 3
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 4    THIS IS OUR X AXIS
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 5
-    [0, 0, 2, 0, 0, 0, 0, 1, 0, 0], // 6
+    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0], // 6
     [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], // 7
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 8
     [0, 1, 1, 0, 0, 0, 0, 0, 0, 1]  // 9
@@ -43,12 +48,12 @@ let tileRules = [
 //         THIS IS OUR Y AXIS
 //   0  1  2  3  4  5  6  7  8  9 
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 0
-[0, 0, 0, 0, 0, 0, 0, 0, 2, 0], // 1
+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], // 1
 [0, 0, 0, 1, 0, 0, 0, 0, 0, 0], // 2
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 3
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 4    THIS IS OUR xAXIS
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 5
-[0, 0, 2, 0, 0, 0, 0, 1, 0, 0], // 6
+[0, 0, 1, 0, 0, 0, 0, 1, 0, 0], // 6
 [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], // 7
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 8
 [0, 1, 1, 0, 0, 0, 0, 0, 0, 1]  // 9
@@ -59,11 +64,23 @@ function preload() {
     //tilemap textures
     textures[0] = loadImage("assets/floor.png");
     textures[1] = loadImage("assets/tunnels.png");
-    textures[2] = loadImage("assets/icecream.png");
+    //textures[2] = loadImage("assets/icecream.png");
 
+
+
+
+    //MIA
+    // ICECREAMS HERE, MAKE THEM APPEAR - reminder for me
+    icecreamSprite = loadImage("assets/icecream.png");
+
+
+
+<<<<<<< HEAD
    //coin system (the coins are icecreams, but to make things easier for myself, they're named coins on the code - mia)
 
    coin = loadImage ("assets/icecream.png"); // STEP 1, IF FAILS COME BACK HERE
+=======
+>>>>>>> fc940bb1c8459187e539d67eb1489e8f8000341a
 
     //Player sprite
     // playerSprite = loadImage("orangecat.png");
@@ -178,6 +195,18 @@ function game() {
           }
         }
     }
+
+
+    
+    text('POINTS: ' , 5, 5);
+
+
+     // attempting to insert points here using if/else.  
+
+    // player.overlap(icecreamSprite)
+
+    //different attempt at inserting points - mia
+    
 }
 
  function keyPressed() {
@@ -417,14 +446,14 @@ function mousePressed(){
 
 
 //MIA CODE
-/* attempts at point system, further research TBD 
+// attempts at point system, further research TBD 
 function display() {
     imageMode(CENTER);
     image(sprite, mouseX, mouseY, 50, 50); 
 
 }
 
-*/
+
 //CLOSE MIA CODE
 
 
