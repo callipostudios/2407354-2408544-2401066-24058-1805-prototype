@@ -11,7 +11,6 @@
           Cameron Sayers 2401066
           Mia Barclay 2405897
 
-
 ## Overview
 This is a tile map, level based game in which the player needs to navigate their way through the levels, each getting progressively harder until the player suceeds in beating the levels. There will be enemies in which the player can shoot at and kill that also shoot at you. There are ice creams which serve as a point system which you will need to collect a certain amount to pass the level. 
 
@@ -84,22 +83,21 @@ I used the tile mapping code from lesson as a base to create the background of t
 
 
 
-Player movement, animation/art assets & player fighting/life system = Anya
+Player movement, animation/art assets & player fighting = Anya
 
-I used the player and player movement code from lesson and from the notion slides. For the player sprites i am currently using placeholders- when the player moves there are 3 different sprites that can appear depending on direction but later on i will change it to be 4 with our original assets. Later on i want to change the player movement to be smoother as having to press a key multiple times just to move in the same direction can be a bit clucnky, i would perhaps make it so that if you hold a key you could move several spaces. For player shooting mechanic i got it to work with mouseX and mouseY but would want this instead be in relation to the current player location. Im not sure how i would go about in accessing the players current possition in the bullet code. Once i get the shooting to work as intended i might try and improve them further by making it so that you can shoot in different directions instead of just upwards.
-(Add a cooldown to the shooting)
+I used the player and player movement code from lesson and from the notion slides. For the player sprites i am currently using placeholders- when the player moves there are 3 different sprites that can appear depending on direction but later on i will change it to be 4 with our original assets. Later on i want to change the player movement to be smoother as having to press a key multiple times just to move in the same direction can be a bit clucnky, i would perhaps make it so that if you hold a key you could move several spaces. For player shooting mechanic i got it to work with mouseX and mouseY but would want this instead be in relation to the current player location. Im not sure how i would go about in accessing the players current possition in the bullet code. Once i get the shooting to work as intended i might try and improve them further by making it so that you can shoot in different directions instead of just upwards. I have yet to implement the life system for the player, the player will likely have 3 lives and one hit from the enemy would reseult in the loss of 1 heart/life.
 
 
-Point system, picking up objects & read.me file/written work = Mia 
 
-<<<<<<< HEAD
-I started off with writing the read.me file with a descriptive narrative of the game plan. I then developed the game mechanics section and described how they worked. I also described the themes and inspiration for the game, as well as the moodboard which shows our inspiration of pastel colours and 8bit art for the game. I started to work on my parts of the code; successfully got the point system in, however, size adjustment of the text is needed (make it bigger and bolder with strokeweight). Also, I need to fix the issue of 'POINTS' disappearing after the character moves. I now have the code ready for the IceCream point systems, but as of now, it is still commented and needs correct placement on the code.
+Point system/picking up objects, life system & read.me file/written work = Mia 
 
- I have yet to implement the life system for the player, the player will likely have 3 lives and one hit from the enemy would reseult in the loss of 1 heart/life.
-=======
+I started off the read.me file with a descriptive narrative of the game plan. I then developed the game mechanics section and described how they worked. I also decribed the themes and inspirations for the game. I also created the moodboard, which shows our inspiration of pastel colours and 8bit art for the game. I started to work on my parts of the code, successfully got the beginning of the point system in however size adjustment of the text needed (make it bigger and bolder w/ strokeweight). Also, I need to fix the issue of it disappearing after the character moves. It comes back if player clicks the mouse, but shortly disappears after. 
+
+REMINDERS FOR ME:
+
 (reminder 1 ice cream = 1 point) Point text has been placed in top left corner. 
 
- psudo = if player hits icecreamSprite points + 1
+ pseudo = if player hits icecreamSprite points + 1
 
 (if player collides with icecreamSprite then add 1 to point system)
 elseif (this means if player doesn't) leave the point system as is. 
@@ -111,12 +109,16 @@ Aim for the next updates:
 07/03 - GOAL
 
 - When you hit the ice cream, number goes up
-- Make the ice cream disappear
 09/03 - GOAL
 
+when a movement is called, make sure that before it happens, switch off set is moving to true //keypressed function
 
->>>>>>> 894298ae5d0da1bac59a1b0adc589455a3ee0aa5
+example code: (replace coin with icecreamsprite)
+underneath function preload:
+coin = loadImage ('mario_coin_png'/side note - name it whatever the ice cream png is called):
+"assets/icecream.png"
 
+between draw and collision box, include coins section/box
 
 Killing enemies, Character art, enemy movement & enemy attacking = Cam 
 

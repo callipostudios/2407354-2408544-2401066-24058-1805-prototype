@@ -18,6 +18,12 @@ let playerSprites = [];
 let playerSpeed = 5;
 let playerSize = tileSize;
 
+//VARIABLES FOR ICECREAM POINT SYSTEM
+
+let icecreamSprite;
+//let pointSystem = 0;
+let playerPoints = 0;
+
 //VARIABLES FOR BULLETS
 let dots = [];
 let bullets = [];
@@ -27,12 +33,12 @@ let graphicMap = [
 //         THIS IS OUR Y AXIS
 //   0  1  2  3  4  5  6  7  8  9 
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 0
-    [0, 0, 0, 0, 0, 0, 0, 0, 2, 0], // 1
+    [0, 0, 0, 0, 0, 0, 0, 0, 1, 0], // 1
     [0, 0, 0, 1, 0, 0, 0, 0, 0, 0], // 2
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 3
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 4    THIS IS OUR X AXIS
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 5
-    [0, 0, 2, 0, 0, 0, 0, 1, 0, 0], // 6
+    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0], // 6
     [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], // 7
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 8
     [0, 1, 1, 0, 0, 0, 0, 0, 0, 1]  // 9
@@ -43,12 +49,12 @@ let tileRules = [
 //         THIS IS OUR Y AXIS
 //   0  1  2  3  4  5  6  7  8  9 
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 0
-[0, 0, 0, 0, 0, 0, 0, 0, 2, 0], // 1
+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], // 1
 [0, 0, 0, 1, 0, 0, 0, 0, 0, 0], // 2
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 3
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 4    THIS IS OUR xAXIS
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 5
-[0, 0, 2, 0, 0, 0, 0, 1, 0, 0], // 6
+[0, 0, 1, 0, 0, 0, 0, 1, 0, 0], // 6
 [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], // 7
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 8
 [0, 1, 1, 0, 0, 0, 0, 0, 0, 1]  // 9
@@ -59,8 +65,11 @@ function preload() {
     //tilemap textures
     textures[0] = loadImage("assets/floor.png");
     textures[1] = loadImage("assets/tunnels.png");
-    textures[2] = loadImage("assets/icecream.png");
+    
+ // ICECREAMS HERE, MAKE THEM APPEAR - reminder for me
+    icecreamSprite = loadImage("assets/icecream.png");
 
+ 
    
 
     //Player sprite
@@ -136,6 +145,16 @@ function win(){
 
 function game() {
     background(0);
+
+    
+  
+        // Use point() function to draw point 
+        
+     
+      
+       
+        
+    
     
     // Loops through all tiles each time draw() is called
     for (let across = 0; across < numAcross; across++) {
@@ -172,8 +191,32 @@ function game() {
             break;
           }
         }
+
+        text('POINTS: ' , 5, 5);
+
     }
+
+
+
+
+
+
+    // attempting to insert points here using if/else.  
+
+    // player.overlap(icecreamSprite)
+
+    //different attempt at inserting points - mia
+    
+    // When the player collects an icecream (assuming icecream tile index is 5)
+
+
+
+
+
+
+
 }
+
 
  function keyPressed() {
     player.setDirection();
@@ -309,6 +352,24 @@ class Player {
         imageMode(CORNER);
         image(this.currentSprite, this.xPos, this.yPos, this.size, this.size);
     }
+
+
+    // LOOK HERE 06/03 - MIA
+
+
+
+
+
+
+
+
+    // attempts at inserting overlap function for ice cream collection
+    overlap(){
+
+
+
+
+    }
 }
 
 
@@ -387,7 +448,7 @@ class Bullet{
 
     display(){
         noStroke();
-        ellipse(CENTER, width/2, height/2);
+        ellipse(CENTER);
         fill(255, this.a);
         ellipse(this.x, this.y, this.r * 2);
     }
@@ -406,12 +467,10 @@ class Bullet{
 
 //Cretates a bullet when pressed
 function mousePressed(){
-    let b = new Bullet(player.xPos + tileSize / 2, player.yPos);
+    let b = new Bullet(mouseX, mouseY);
     bullets.push(b);
 }
 
-
-//MIA CODE
 /* attempts at point system, further research TBD 
 function display() {
     imageMode(CENTER);
@@ -420,15 +479,7 @@ function display() {
 }
 
 */
-//CLOSE MIA CODE
 
-
-
-
-
-
-
-//CAMERON CODE
 /*
 //VARIABLES FOR ENEMIES
 let enemy;
@@ -448,20 +499,10 @@ function preload() {
         right: loadImage ("assets/dog1.jpeg")
     }
 }
-// curently trying to make the enemy move from left to right, ending the game if they collide with the player
-*/
-
-//CLOSE CAMERON CODE
 
 
 
-
-
-
-
-/*MIA CODE
-
-// COMMENTED NEW CODE 07/03/24 - needs to be correctly placed
+    // COMMENTED NEW CODE 07/03/24 - needs to be correctly placed
  // icecreamSprite(icecreamXPos, icecreamXPos, icecreamSize);
 
  //if (lives <= 0) {
@@ -497,18 +538,6 @@ icecreamXPos = random(25, 426);
 
 //let lives = 5;
 
-
-    // attempting to insert points here using if/else.  
-
-    // player.overlap(icecreamSprite)
-
-    //different attempt at inserting points - mia
-    
-    // When the player collects an icecream (assuming icecream tile index is 5)
-
 //}
-
-CLOSE MIA CODE */
-
-
-
+// curently trying to make the enemy move from left to right, ending the game if they collide with the player
+*/
