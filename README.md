@@ -85,11 +85,15 @@ I used the tile mapping code from lesson as a base to create the background of t
 
 Player movement, animation/art assets & player fighting/life system = Anya
 
-I used the player and player movement code from lesson and from the notion slides. For the player sprites i am currently using placeholders- when the player moves there are 3 different sprites that can appear depending on direction but later on i will change it to be 4 with our original assets. Later on i want to change the player movement to be smoother as having to press a key multiple times just to move in the same direction can be a bit clucnky, i would perhaps make it so that if you hold a key you could move several spaces. For player shooting mechanic i got it to work with mouseX and mouseY but would want this instead be in relation to the current player location. Im not sure how i would go about in accessing the players current possition in the bullet code. Once i get the shooting to work as intended i might try and improve them further by making it so that you can shoot in different directions instead of just upwards. I have yet to implement the life system for the player, the player will likely have 3 lives and one hit from the enemy would reseult in the loss of 1 heart/life.
-
+I used the player and player movement code from lesson and from the notion slides. For the player sprites i am currently using placeholders- when the player moves there are 3 different sprites that can appear depending on direction but later on i will change it to be 4 with our original assets. Later on i want to change the player movement to be smoother as having to press a key multiple times just to move in the same direction can be a bit clucnky, i would perhaps make it so that if you hold a key you could move several spaces. For player shooting mechanic i got it to work with mouseX and mouseY but would want this instead be in relation to the current player location. Im not sure how i would go about in accessing the players current possition in the bullet code. Once i get the shooting to work as intended i might try and improve them further by making it so that you can shoot in different directions instead of just upwards.
 
 
 Point system, picking up objects & read.me file/written work = Mia 
+
+I started off with writing the read.me file with a descriptive narrative of the game plan. I then developed the game mechanics section and described how they worked. I also described the themes and inspiration for the game, as well as the moodboard which shows our inspiration of pastel colours and 8bit art for the game. I started to work on my parts of the code; successfully got the point system in, however, size adjustment of the text is needed (make it bigger and bolder with strokeweight). Also, I need to fix the issue of 'POINTS' disappearing after the character moves. I now have the code ready for the IceCream point systems, but as of now, it is still commented and needs correct placement on the code.
+
+ I have yet to implement the life system for the player, the player will likely have 3 lives and one hit from the enemy would reseult in the loss of 1 heart/life.
+
 
 Killing enemies, Character art, enemy movement & enemy attacking = Cam 
 
