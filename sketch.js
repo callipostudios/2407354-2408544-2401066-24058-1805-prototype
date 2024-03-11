@@ -387,7 +387,7 @@ class Bullet{
 
     display(){
         noStroke();
-        ellipse(CENTER);
+        ellipse(CENTER, width/2, height/2);
         fill(255, this.a);
         ellipse(this.x, this.y, this.r * 2);
     }
@@ -411,9 +411,24 @@ function mousePressed(){
 }
 
 
+//MIA CODE
+/* attempts at point system, further research TBD 
+function display() {
+    imageMode(CENTER);
+    image(sprite, mouseX, mouseY, 50, 50); 
+
+}
+
+*/
+//CLOSE MIA CODE
 
 
 
+
+
+
+
+//CAMERON CODE
 /*
 //VARIABLES FOR ENEMIES
 let enemy;
@@ -435,3 +450,65 @@ function preload() {
 }
 // curently trying to make the enemy move from left to right, ending the game if they collide with the player
 */
+
+//CLOSE CAMERON CODE
+
+
+
+
+
+
+
+/*MIA CODE
+
+// COMMENTED NEW CODE 07/03/24 - needs to be correctly placed
+ // icecreamSprite(icecreamXPos, icecreamXPos, icecreamSize);
+
+ //if (lives <= 0) {
+    //speed = 0;
+    //icecreamXPos = -100;}
+    //if (icecreamXPos >= mouseX - playerSize/2 && icecreamYPos <= mouseX + playerSize/2 && icecreamYPos > playerSize) {
+    //icecreamYPos = -playerSize / 2;
+    //circleXPos = random(25, 426);
+    //score += 1;} 
+    //if (icecreamYPos >= 525) {
+    //icecreamYPos = -playerSize / 2;
+    //icecreamXPos = random(25, 426);
+    //if (lives === 0) {
+    //lives = 0;} else {lives -= 1;}}}
+
+   // }
+
+//VARIABLES FOR ICECREAM POINT SYSTEM
+
+let icecreamSprite;
+let icecreamXPos;
+let icecreamYPos;
+let icecreamSize = 25;
+//let pointSystem = 0;
+let playerPoints = 0;
+
+//if (playerCollision) {
+
+
+// icecreamSprite location setting
+icecreamYPos = -playerSize / 2;
+icecreamXPos = random(25, 426);
+
+//let lives = 5;
+
+
+    // attempting to insert points here using if/else.  
+
+    // player.overlap(icecreamSprite)
+
+    //different attempt at inserting points - mia
+    
+    // When the player collects an icecream (assuming icecream tile index is 5)
+
+//}
+
+CLOSE MIA CODE */
+
+
+

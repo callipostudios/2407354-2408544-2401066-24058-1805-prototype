@@ -91,5 +91,25 @@ I used the player and player movement code from lesson and from the notion slide
 
 Point system, picking up objects & read.me file/written work = Mia 
 
+(reminder 1 ice cream = 1 point) Point text has been placed in top left corner. 
+
+ psudo = if player hits icecreamSprite points + 1
+
+(if player collides with icecreamSprite then add 1 to point system)
+elseif (this means if player doesn't) leave the point system as is. 
+
+Aim for the next updates:
+
+- Make the icecreams show up and disappear when hit. 
+- Figure out how to keep the point text fixed (talk to anya, could be to do w her bullet thing)
+07/03 - GOAL
+
+- When you hit the ice cream, number goes up
+- Make the ice cream disappear
+09/03 - GOAL
+
+
+
+
 Killing enemies, Character art, enemy movement & enemy attacking = Cam 
 
