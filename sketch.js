@@ -406,7 +406,7 @@ class Bullet{
 
 //Cretates a bullet when pressed
 function mousePressed(){
-    let b = new Bullet(player.xPos, player.yPos);
+    let b = new Bullet(player.xPos + tileSize / 2, player.yPos);
     bullets.push(b);
 }
 
