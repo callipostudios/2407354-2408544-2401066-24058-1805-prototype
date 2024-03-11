@@ -61,7 +61,9 @@ function preload() {
     textures[1] = loadImage("assets/tunnels.png");
     textures[2] = loadImage("assets/icecream.png");
 
-   
+   //coin system (the coins are icecreams, but to make things easier for myself, they're named coins on the code - mia)
+
+   coin = loadImage ("assets/icecream.png"); // STEP 1, IF FAILS COME BACK HERE
 
     //Player sprite
     // playerSprite = loadImage("orangecat.png");
@@ -104,6 +106,9 @@ function setup() {
 }
 
 // this creates a stage which flicks through the screens when needed, the game will always start with the start screen, then when clciked move into the game.
+
+
+
 
 function draw(){
     if (stage == 0) {
