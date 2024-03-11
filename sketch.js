@@ -71,16 +71,10 @@ function preload() {
 
     //MIA
     // ICECREAMS HERE, MAKE THEM APPEAR - reminder for me
-    icecreamSprite = loadImage("assets/icecream.png");
+    coinSprite = loadImage("assets/icecream.png");
 
 
 
-<<<<<<< HEAD
-   //coin system (the coins are icecreams, but to make things easier for myself, they're named coins on the code - mia)
-
-   coin = loadImage ("assets/icecream.png"); // STEP 1, IF FAILS COME BACK HERE
-=======
->>>>>>> fc940bb1c8459187e539d67eb1489e8f8000341a
 
     //Player sprite
     // playerSprite = loadImage("orangecat.png");
