@@ -406,7 +406,7 @@ class Bullet{
 
 //Cretates a bullet when pressed
 function mousePressed(){
-    let b = new Bullet(mouseX, mouseY);
+    let b = new Bullet(player.xPos, player.yPos);
     bullets.push(b);
 }
 
