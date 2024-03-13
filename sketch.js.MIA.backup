@@ -39,24 +39,24 @@ let graphicMap = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 5
     [0, 0, 1, 0, 0, 0, 0, 1, 0, 0], // 6
     [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], // 7
-    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 8
+    [0, 0, 0, 0, 0, 2, 0, 0, 0, 0], // 8
     [0, 1, 1, 0, 0, 0, 0, 0, 0, 1]  // 9
 
 ]
 
 let tileRules = [ 
-//         THIS IS OUR Y AXIS
+    //         THIS IS OUR Y AXIS
 //   0  1  2  3  4  5  6  7  8  9 
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 0
-[0, 0, 0, 0, 0, 0, 0, 0, 1, 0], // 1
-[0, 0, 0, 1, 0, 0, 0, 0, 0, 0], // 2
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 3
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 4    THIS IS OUR xAXIS
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 5
-[0, 0, 1, 0, 0, 0, 0, 1, 0, 0], // 6
-[0, 0, 1, 0, 0, 0, 0, 0, 0, 0], // 7
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 8
-[0, 1, 1, 0, 0, 0, 0, 0, 0, 1]  // 9
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 0
+    [0, 0, 0, 0, 0, 0, 0, 0, 1, 0], // 1
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0], // 2
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 3
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 4    THIS IS OUR xAXIS
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // 5
+    [0, 0, 1, 0, 0, 0, 0, 1, 0, 0], // 6
+    [0, 0, 1, 0, 0, 0, 0, 0, 0, 0], // 7
+    [0, 0, 0, 0, 0, 2, 0, 0, 0, 0], // 8
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 1]  // 9
 ]
 
 
@@ -64,7 +64,7 @@ function preload() {
     //tilemap textures
     textures[0] = loadImage("assets/floor.png");
     textures[1] = loadImage("assets/tunnels.png");
-    //textures[2] = loadImage("assets/icecream.png");
+    textures[2] = loadImage("assets/icecream.png");
 
 
 
@@ -72,10 +72,11 @@ function preload() {
 
    //coin system (the coins are icecreams, but to make things easier for myself, they're named coins on the code - mia)
 
-   coin = loadImage ("assets/icecream.png"); // STEP 1, IF FAILS COME BACK HERE
+    // STEP 1, IF FAILS COME BACK HERE
     //MIA
     // ICECREAMS HERE, MAKE THEM APPEAR - reminder for me
     coinSprite = loadImage("assets/icecream.png");
+
 
 
     //Player sprite
@@ -195,7 +196,7 @@ function game() {
  // coins
  //image(coin, c1X, c1Y, cWidth, cHeight); - paused the game NEEDS FIXING
     
-    text('POINTS: ' , 5, 5);
+    text('POINTS: 0' + pointSystem , 5, 5);
     text('LIVES: 3', 205, 5); // come back to this wednesday
 
 
@@ -315,7 +316,7 @@ class Player {
                 
                 //Because the player is ready to move there, we can set isMoving to true!
                 this.isMoving = true;
-            }
+            } // if line (311) corresponds to any number other than 1 on tile rules then execute codes pn lines 314-318
         }
     }
 
@@ -333,6 +334,21 @@ class Player {
                 this.isMoving = false;
                 this.dirX = 0;
                 this.dirY = 0;
+
+                let currentTileX = Math.floor(this.xPos / this.tileSize);
+                let currentTileY = Math.floor(this.yPos / this.tileSize);
+                console.log("currentTileX = ", currentTileX);
+                console.log("currentTileY = ", currentTileY)
+
+                //checking if tile the player is currently in has an ice cream in it.
+                if (this.tileRules[currentTileY][currentTileX] === 2) {
+                    console.log("Accessing!")
+                    //Change texture for that tile to a floor (i.e. remove the ice cream)
+                    tilemap[currentTileX][currentTileY].texture = textures[0];
+                    
+                    //Add one point to the score
+                    pointSystem++;
+                }
             }
         }
     }
@@ -419,7 +435,7 @@ class Bullet{
 
     display(){
         noStroke();
-        ellipse(CENTER, width/2, height/2);
+        //ellipse(CENTER, width/2, height/2);
         fill(255, this.a);
         ellipse(this.x, this.y, this.r * 2);
     }
